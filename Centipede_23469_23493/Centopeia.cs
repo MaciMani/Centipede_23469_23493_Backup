@@ -40,24 +40,18 @@ namespace Centipede_23469_23493
 
         public void Movimento(GameTime gameTime)
         {            
-            centHitbox.Location = position.ToPoint();
             if (position.X >= graphicsDevice.Viewport.Width / 2)
             {
-                position += new Vector2(0, 1);
                 velocity = -velocity;
+                position += new Vector2(0, 1);
             }
             if (position.X < -graphicsDevice.Viewport.Width / 2)
             {
-                position += new Vector2(0, 1);
                 velocity = -velocity;
+                position += new Vector2(0, 1);
             }
+            centHitbox.Location = position.ToPoint();
             position.X += (float)gameTime.ElapsedGameTime.TotalSeconds * 200;
-        }
-
-        public void Update(GameTime gameTime)
-        {
-            Movimento(gameTime);
-            GivePos();
         }
 
         public void Draw()

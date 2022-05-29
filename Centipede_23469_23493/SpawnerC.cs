@@ -40,7 +40,7 @@ namespace Centipede_23469_23493
             for (int x = 0; x < 10; x++)
             {
                 Centopeia c = new Centopeia(spriteBatch, content, graphicsDevice);
-                c.position.X += x * 10;
+                c.position.X += x * 20;
                 centopeia.Add(c);
             }
         }

@@ -55,7 +55,7 @@ namespace Centipede_23469_23493
             // TODO: Add your update logic here
             nave.Movimento(gameTime);
             nave.Dispara(gameTime);
-            centopeia.Movimento(gameTime);
+            centopeiac.Update(gameTime);
             centopeia.GivePos();
             colision.colision();
             base.Update(gameTime);
@@ -71,7 +71,7 @@ namespace Centipede_23469_23493
             // TODO: Add your drawing code here
             _spriteBatch.Draw(_backgroundTexture, new Vector2(0, 0), Color.White);
             nave.Draw();
-            centopeia.Draw();
+            centopeiac.Draw();
             base.Draw(gameTime);
             _spriteBatch.End();
         }
