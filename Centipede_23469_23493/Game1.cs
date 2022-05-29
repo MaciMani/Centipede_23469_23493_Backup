@@ -13,6 +13,8 @@ namespace Centipede_23469_23493
         Centopeia centopeia;
         Colision colision;
         SpawnerC centopeiac;
+        Mushrooms mushroom;
+        Mushrooms[] cogumelos = new Mushrooms[20];
         KeyboardManager Km;
 
         public Game1()
@@ -43,6 +45,11 @@ namespace Centipede_23469_23493
             _backgroundTexture = Content.Load<Texture2D>("Content/Background");
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             nave = new Nave(Km, _spriteBatch, Content, GraphicsDevice);
+            for (int i = 0; i < 19; i++)
+            {
+                mushroom = new Mushrooms(_spriteBatch, Content, GraphicsDevice);
+                cogumelos[i] = mushroom;
+            }
             centopeia = new Centopeia(_spriteBatch, Content, GraphicsDevice);
             centopeiac = new SpawnerC(_spriteBatch, Content, GraphicsDevice);
             colision = new Colision(nave.tiros,centopeiac.centopeia);
@@ -72,6 +79,10 @@ namespace Centipede_23469_23493
             _spriteBatch.Draw(_backgroundTexture, new Vector2(0, 0), Color.White);
             nave.Draw();
             centopeiac.Draw();
+            for (int i = 0; i < 19; i++)
+            {
+                cogumelos[i].Draw();
+            }
             base.Draw(gameTime);
             _spriteBatch.End();
         }
