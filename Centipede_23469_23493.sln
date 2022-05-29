@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Centipede_23469_23493", "Centipede_23469_23493\Centipede_23469_23493.csproj", "{9892038F-627F-474D-82B0-FB1F1417931F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9892038F-627F-474D-82B0-FB1F1417931F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9892038F-627F-474D-82B0-FB1F1417931F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9892038F-627F-474D-82B0-FB1F1417931F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9892038F-627F-474D-82B0-FB1F1417931F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5A4691FF-889C-459E-824D-00BF93E5B5D8}
+	EndGlobalSection
+EndGlobal
