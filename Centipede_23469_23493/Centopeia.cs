@@ -31,6 +31,8 @@ namespace Centipede_23469_23493
             centTexture = content.Load<Texture2D>("Content/Bixo");
             //centsound = content.Load<SoundEffect>("Content/Shooting_Sound");
 
+            Point p = new Point(centTexture.Width, centTexture.Height);
+            centHitbox = new Rectangle(position.ToPoint(), p);
         }
 
         public Rectangle gethitbox()

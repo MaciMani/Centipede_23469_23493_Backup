@@ -37,6 +37,7 @@ namespace Centipede_23469_23493
             tiroPos = nave.GivePos();
             isInstantiated = true;
             Size = new Vector2(0.2f, tiroTexture.Height * 0.2f / tiroTexture.Width);
+            
             Point p = new Point(tiroTexture.Width, tiroTexture.Height);
             TiroHitbox = new Rectangle(tiroPos.ToPoint(), p);
 
