@@ -18,8 +18,8 @@ namespace Centipede_23469_23493
         GraphicsDevice graphicsDevice;
         ContentManager content;
         SoundEffect centsound;
-        Vector2 velocity;
-        Vector2 position;
+        int velocity = 1;
+        public Vector2 position;
         Rectangle centHitbox;
 
         public Centopeia(SpriteBatch spriteBatch, ContentManager content, GraphicsDevice graphicsDevice)
@@ -40,18 +40,18 @@ namespace Centipede_23469_23493
 
         public void Movimento(GameTime gameTime)
         {            
-            position.X += (float)gameTime.ElapsedGameTime.TotalSeconds * 200;
             centHitbox.Location = position.ToPoint();
             if (position.X >= graphicsDevice.Viewport.Width / 2)
             {
-                this.position += new Vector2(0, 1);
-                this.velocity = velocity * -1;
+                position += new Vector2(0, 1);
+                velocity = -velocity;
             }
             if (position.X < -graphicsDevice.Viewport.Width / 2)
             {
-                this.position += new Vector2(0, 1);
-                this.velocity = velocity * -1;
+                position += new Vector2(0, 1);
+                velocity = -velocity;
             }
+            position.X += (float)gameTime.ElapsedGameTime.TotalSeconds * 200;
         }
 
         public void Update(GameTime gameTime)

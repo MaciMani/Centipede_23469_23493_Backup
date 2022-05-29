@@ -11,8 +11,8 @@ namespace Centipede_23469_23493
         private Texture2D _backgroundTexture;
         Nave nave;
         Centopeia centopeia;
-        Centopeia[] centopeiaa = new Centopeia[10];
         Colision colision;
+        SpawnerC centopeiac;
         KeyboardManager Km;
 
         public Game1()
@@ -44,7 +44,8 @@ namespace Centipede_23469_23493
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             nave = new Nave(Km, _spriteBatch, Content, GraphicsDevice);
             centopeia = new Centopeia(_spriteBatch, Content, GraphicsDevice);
-            colision = new Colision(nave.tiros);
+            centopeiac = new SpawnerC(_spriteBatch, Content, GraphicsDevice);
+            colision = new Colision(nave.tiros,centopeiac.centopeia);
         }
 
         protected override void Update(GameTime gameTime)
